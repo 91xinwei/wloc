@@ -29,7 +29,7 @@ export async function generatedFiles() {
     '<!-- subscriptions:start -->',
     '| 客户端 | 订阅地址 |', '| --- | --- |',
     ...modules.map(({ name, url }) => `| ${name} | [${url}](${url}) |`),
-    '', config.siteUrl ? `选点页面：[打开自部署站点](${new URL(config.siteUrl).origin}/)。` : '选点页面：尚未配置公共实例，请按下方说明自行部署。',
+    '', config.siteUrl ? `选点页面：[${new URL(config.siteUrl).origin}/](${new URL(config.siteUrl).origin}/)。` : '选点页面：尚未配置公共实例，请按下方说明自行部署。',
     '', `[浏览源码](${repoUrl}) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=${repoUrl}/tree/${config.branch}/worker)`,
     '<!-- subscriptions:end -->',
   ].join('\n');
