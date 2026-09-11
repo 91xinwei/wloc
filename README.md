@@ -13,11 +13,11 @@
 <!-- subscriptions:start -->
 | 客户端 | 订阅地址 |
 | --- | --- |
-| Surge / Egern | [wloc.sgmodule](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule) |
-| Quantumult X | [wloc.conf](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf) |
-| Loon | [wloc.lpx](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx) |
-| Stash | [wloc.stoverride](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride) |
-| Shadowrocket | [wloc.module](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module) |
+| Surge / Egern | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.sgmodule) |
+| Quantumult X | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.conf) |
+| Loon | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.lpx) |
+| Stash | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride) |
+| Shadowrocket | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module) |
 
 选点页面：尚未配置公共实例，请按下方说明自行部署。
 
@@ -32,8 +32,8 @@ Egern 沿用上游 Surge 模块兼容说明，尚未单独复核。Stash 使用�
 
 | 快捷指令 | 安装入口 | 用途 |
 | --- | --- | --- |
-| wloc 设置地理位置 | [添加设置指令](https://www.icloud.com/shortcuts/a82717d8fdad4e6280866fcf911173f7) | 从地图分享位置，解析坐标并保存到代理客户端 |
-| wloc 清理恢复位置 | [添加恢复指令](https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f) | 清除已保存的虚拟坐标 |
+| wloc 设置地理位置 | [https://www.icloud.com/shortcuts/a82717d8fdad4e6280866fcf911173f7](https://www.icloud.com/shortcuts/a82717d8fdad4e6280866fcf911173f7) | 从地图分享位置，解析坐标并保存到代理客户端 |
+| wloc 清理恢复位置 | [https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f](https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f) | 清除已保存的虚拟坐标 |
 
 **使用步骤：**
 

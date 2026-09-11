@@ -1,5 +1,5 @@
 import { GCJ_BROWSER_JS } from "./gcj-browser.js";
-import { SOURCE_URL } from "./project.js";
+import { SOURCE_URL, MODULE_LINKS } from "./project.js";
 
 export function getPageHtml() {
   return `<!DOCTYPE html>
@@ -488,6 +488,16 @@ document.getElementById('favNameInput').addEventListener('keydown', e => { if(e.
 renderFavs();
 queryActive();
 <\/script>
+<section class="panel" aria-labelledby="module-links-title">
+  <div class="card">
+    <h2 id="module-links-title" style="font-size:16px;margin-bottom:8px">模块订阅地址</h2>
+    <p style="font-size:13px;color:var(--gray);margin-bottom:12px">长按对应地址复制，在代理客户端中添加模块订阅。Stash 使用原生覆写。</p>
+    ${MODULE_LINKS.map(({ name, url }) => `<div style="margin-top:12px">
+      <h3>${name}</h3>
+      <a href="${url}" target="_blank" rel="noopener noreferrer" style="display:block;overflow-wrap:anywhere;font-size:13px;line-height:1.6">${url}</a>
+    </div>`).join('')}
+  </div>
+</section>
 <footer style="padding:16px;text-align:center;font-size:13px;color:#666">
   WLOC 社区维护版 · <a href="${SOURCE_URL}" target="_blank" rel="noopener noreferrer">源码与许可证</a>
 </footer>
