@@ -15,7 +15,22 @@
 
 ## 快捷指令
 
-原来的 iCloud 分享链接未作为本维护版验证通过的安装入口。如果你已经装过旧快捷指令，可先复制一份再编辑其中的解析 URL，把旧 Worker 换成自己的站点。
+### 安装原作者版本
+
+- [wloc 设置地理位置](https://www.icloud.com/shortcuts/a82717d8fdad4e6280866fcf911173f7)
+- [wloc 清理恢复位置](https://www.icloud.com/shortcuts/f42632d406504f24a2cd163af4fe012f)
+
+这两个链接来自上游 README。尚未验证当前分享链接的可下载性及真机运行结果，也没有将它们重新发布为社区版。安装后，在苹果地图选点 → 共享 → 选择设置指令；高德地图通过「分享 → 更多」调用。恢复指令用于清除保存值，不保证立即清除系统定位缓存。
+
+### 替换旧解析服务
+
+1. 按[部署说明](DEPLOYMENT.md)部署自己的 Worker，取得 HTTPS 地址。
+2. 如果已经装过旧指令，先在「快捷指令」App 中复制一份备份，再打开设置指令的编辑界面。
+3. 查找包含 `wloc-spoofer.wloc.workers.dev` 的 URL 或文本动作，把该服务地址替换为自己的 Worker 地址，保留 `/api/parse` 路径、查询参数及输入变量。
+4. 保留 `https://gs-loc.apple.com/wloc-settings/save`。它是客户端拦截的设备保存路径，不是旧公共 Worker。
+5. 用地图分享链接检查解析和保存结果，再运行恢复指令确认清理行为。
+
+README 和模块中的新 GitHub 地址不会自动同步到已安装的快捷指令。如果 iCloud 分享失效，仍可使用自部署选点网页；本仓库未恢复可直接导入的 `.shortcut` 文件。
 
 解析接口：`GET /api/parse?u=<URL编码的地图链接>&format=json`，成功返回 `lat`、`lon`、`name`。纯文本模式返回 `lat=...&lon=...`。保存接口仍为 `https://gs-loc.apple.com/wloc-settings/save`，它由手机代理脚本拦截，不是 Worker 路由；不要将这个 Apple 地址替换为 Worker 域名。
 
