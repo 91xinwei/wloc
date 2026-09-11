@@ -1,0 +1,17 @@
+{
+  "name": "wloc-community",
+  "private": true,
+  "type": "module",
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "configure": "node scripts/configure.mjs",
+    "check": "node scripts/check.mjs",
+    "check:release": "node scripts/check.mjs --release",
+    "test": "node --test worker/test/*.test.mjs worker/test/*.test.js",
+    "build:check": "npm --prefix worker run build:check",
+    "pages:build": "npm --prefix worker run pages:build"
+  }
+}

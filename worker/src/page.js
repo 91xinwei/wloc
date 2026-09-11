@@ -1,4 +1,5 @@
 import { GCJ_BROWSER_JS } from "./gcj-browser.js";
+import { SOURCE_URL } from "./project.js";
 
 export function getPageHtml() {
   return `<!DOCTYPE html>
@@ -487,6 +488,9 @@ document.getElementById('favNameInput').addEventListener('keydown', e => { if(e.
 renderFavs();
 queryActive();
 <\/script>
+<footer style="padding:16px;text-align:center;font-size:13px;color:#666">
+  WLOC 社区维护版 · <a href="${SOURCE_URL}" target="_blank" rel="noopener noreferrer">源码与许可证</a>
+</footer>
 </body>
 </html>`;
 }

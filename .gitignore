@@ -1,10 +1,18 @@
 node_modules/
+.npm-cache/
+.wrangler/
+.dev.vars*
+.env*
+!.env.example
 .DS_Store
-
-# 以下几条只针对仓库根目录的模块构建来源(本仓库只发布 dist/ 里的成品)。
-# 必须带前导斜杠: 不带斜杠的 "src/" 会匹配任意层级, 把 worker/src/ 一起吞掉,
-# 结果是新增的 worker 源码文件被静默忽略、提交时凭空消失。
-/src/
-/package.json
-/package-lock.json
-/rollup.config.js
+Thumbs.db
+*.log
+*.pem
+*.key
+*.p12
+*.pfx
+/build/
+/recovered-upstream/
+/*.bundle
+/RECOVERY-NOTES.md
+/PREPARE-REPORT.md

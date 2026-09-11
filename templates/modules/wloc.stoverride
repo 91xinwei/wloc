@@ -1,8 +1,8 @@
 name: Apple WLOC 定位修改
-desc: "Apple 网络定位修改 | 使用说明: https://github.com/xepes0/wloc#使用方法"
+desc: "Apple 网络定位修改 | 使用说明: {{REPO_URL}}#使用方法"
 author: Yu9191 Rewrite
-homepage: https://github.com/xepes0/wloc
-icon: https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/wloc.jpg
+homepage: {{REPO_URL}}
+icon: {{RAW_URL}}/wloc.jpg
 category: Tools
 
 http:
@@ -29,8 +29,8 @@ http:
 
 script-providers:
   WLOC.Location:
-    url: https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/dist/wloc.js
+    url: {{RAW_URL}}/dist/wloc.js
     interval: 86400
   WLOC.Settings:
-    url: https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/dist/wloc-settings.js
+    url: {{RAW_URL}}/dist/wloc-settings.js
     interval: 86400

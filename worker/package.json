@@ -1,13 +1,24 @@
 {
   "type": "module",
   "scripts": {
-    "test": "node --test 'test/*.test.mjs'",
-    "dev": "npx wrangler dev",
-    "deploy": "npx wrangler deploy --minify",
-    "pages:dev": "npx wrangler pages dev --port 8787 -c wrangler.pages.jsonc",
-    "pages:deploy": "npx wrangler pages deploy -c wrangler.pages.jsonc"
+    "test": "node --test test/*.test.mjs test/*.test.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "build:check": "wrangler deploy --dry-run --outdir ../build/worker",
+    "pages:build": "wrangler pages functions build functions --outdir ../build/pages",
+    "pages:dev": "wrangler pages dev --port 8787 -c wrangler.pages.jsonc",
+    "pages:deploy": "wrangler pages deploy -c wrangler.pages.jsonc"
   },
   "dependencies": {
-    "hono": "^4.10.6"
+    "hono": "4.13.0"
+  },
+  "name": "wloc-worker",
+  "private": true,
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "4.131.0"
   }
 }

@@ -4,6 +4,12 @@ import { parseCoords, gcj02ToWgs84, toWgs84, round6, inRange } from "./parse.js"
 
 const app = new Hono();
 
+// 解析请求可能包含位置；明确禁止浏览器和共享缓存存储 API 响应。
+app.use('/api/*', async (c, next) => {
+  c.header('Cache-Control', 'no-store');
+  await next();
+});
+
 app.get("/", (c) => {
   return c.html(getPageHtml());
 });
