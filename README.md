@@ -19,7 +19,7 @@
 | Stash | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.stoverride) |
 | Shadowrocket | [https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module](https://raw.githubusercontent.com/xepes0/wloc/refs/heads/main/modules/wloc.module) |
 
-选点页面：[https://wloc.xepesw.workers.dev/](https://wloc.xepesw.workers.dev/)
+选点页面：[https://wloc.xepesw.workers.dev/](https://wloc.xepesw.workers.dev/)。
 
 [浏览源码](https://github.com/xepes0/wloc) · [部署到 Cloudflare Workers](https://deploy.workers.cloudflare.com/?url=https://github.com/xepes0/wloc/tree/main/worker)
 <!-- subscriptions:end -->
@@ -41,7 +41,7 @@ Egern 沿用上游 Surge 模块兼容说明，尚未单独复核。Stash 使用�
 2. 在苹果地图长按选点 → 共享 → 选择「wloc 设置地理位置」；高德地图可通过「分享 → 更多」进入分享菜单。
 3. 运行后打开地图验证结果。需要恢复时，运行「wloc 清理恢复位置」。若模块参数另设了坐标，还需关闭模块或恢复默认参数。
 
-> 设置位置指令基于原作者版本，由维护者将解析地址更新为 'https://wloc.xepesw.workers.dev/api/parse` 并重新分享；恢复位置指令仍为原作者分享。已安装的旧指令不会自动更新，请备份后安装新版或手动替换解析地址。尚未独立复核新版指令的真机运行结果。具体操作见[快捷指令迁移说明](docs/shortcut-guide.md#快捷指令)。
+> 设置位置指令基于原作者版本，由维护者将解析地址更新为 `https://wloc.xepesw.workers.dev/api/parse` 并重新分享；恢复位置指令仍为原作者分享。已安装的旧指令不会自动更新，请备份后安装新版或手动替换解析地址。尚未独立复核新版指令的真机运行结果。具体操作见[快捷指令迁移说明](docs/shortcut-guide.md#快捷指令)。
 
 ## 使用方法
 
@@ -128,7 +128,7 @@ npm run pages:build
 - [@YeTianXingShi](https://github.com/YeTianXingShi) - randomRadius 随机坐标扰动功能原始实现 ([#70](https://github.com/Yu9191/wloc/pull/70))
 - [@SajoLuo](https://github.com/SajoLuo) - Stash 响应格式修复 ([#66](https://github.com/Yu9191/wloc/pull/66))
 - [@SkywardLab](https://github.com/SkywardLab) - 扩展 WLOC 备用域名拦截 ([#90](https://github.com/Yu9191/wloc/pull/90))
-- [@beiming0000](https://github.com/beiming0000) - 逗号小数格式坐标丢失问题报告 ([#96](https://github.com/Yu9191/wloc/issues/96))
+- [@beiming0000](https://github.com/Yu9191/wloc/issues/96) - 逗号小数格式坐标丢失问题报告 ([#96](https://github.com/Yu9191/wloc/issues/96))
 
 ## 许可证
 
